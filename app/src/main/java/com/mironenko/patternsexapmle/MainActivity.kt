@@ -17,7 +17,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        Singleton.doSome()
+        Singleton.getInstance?.doSome()
 
         val someClassInstance: SomeClass = SomeClass.Builder()
             .withNumber(1)
