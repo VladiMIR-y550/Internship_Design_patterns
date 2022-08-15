@@ -11,7 +11,9 @@ class Singleton private constructor() {
             get() {
                 if (instance == null) {
                     synchronized(Singleton::class.java) {
-                        instance = Singleton()
+                        if (instance == null) {
+                            instance = Singleton()
+                        }
                     }
                 }
                 return instance
